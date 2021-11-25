@@ -9,9 +9,13 @@ const routes: Routes = [
   {
     path: 'product/:id',
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
-  },  {
+  },
+  {
     path: 'lists',
     loadChildren: () => import('./pages/lists/lists.module').then( m => m.ListsPageModule)
+  },
+  { 
+    path: 'lists/:id', loadChildren: './pages/lists/lists.module#ListsPageModule' 
   },
 
 ];
